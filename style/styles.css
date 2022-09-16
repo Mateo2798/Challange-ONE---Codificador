@@ -1,0 +1,40 @@
+body{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+}
+.contenedor{
+   background: red; 
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+textarea{
+    font-style: normal;
+    color: #0A3871;
+    padding: 1em;
+}
+.contenedor-texto{
+margin: 1em;
+padding: 0.5em;
+background: green;
+}
+
+.contenedor-botones{
+    margin: 1em 0 1em 0;
+    text-align: center;
+}
+
+.buttons{
+    width: 40%;
+    height: 2.5em;
+    border-radius: 5px;
+    color: #0A3871;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+}
+
+.buttons:active{
+    background: #0A3871;
+    color: #D8DFE8;;
+}
