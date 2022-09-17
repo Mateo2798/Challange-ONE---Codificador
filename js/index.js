@@ -2,6 +2,8 @@ var texto =  document.querySelector("textarea");
 var buttonEncriptador = document.getElementById("encriptador");
 var buttonDesencriptar = document.getElementById("desencriptador");
 
+var palabrasClave = ["ai","enter","imes","ober","ufat"];
+
  function encriptar(){
    var letras = texto.value;
    var contador = 0
@@ -24,29 +26,28 @@ var buttonDesencriptar = document.getElementById("desencriptador");
    
    return alert(palabra);
 }
-var palabrasClave = ["ai","enter","imes","ober","ufat"];
+
 function desencriptar(){
     var letras = texto.value;
     
     palabra = ""
-    var prueba = 1;
-    for(var i = 0; i  < letras.length; i += prueba){
-        prueba = 1;
-        console.log( i)
+    var posicion = 1;
+    for(var i = 0; i  < letras.length; i += posicion){
+        posicion = 1;
            if(letras.substr(i,palabrasClave[0].length) == palabrasClave[0]){
-            prueba = palabrasClave[0].length;
+            posicion = palabrasClave[0].length;
             palabra +="a"
            }else if(letras.substr(i,palabrasClave[1].length) == palabrasClave[1]){
-            prueba = palabrasClave[1].length;
+            posicion = palabrasClave[1].length;
             palabra +="e"
            }else if(letras.substr(i,palabrasClave[2].length) == palabrasClave[2]){
-            prueba = palabrasClave[2].length;
+            posicion = palabrasClave[2].length;
             palabra +="i"
            }else if(letras.substr(i,palabrasClave[3].length) == palabrasClave[3]){
-            prueba = palabrasClave[3].length;
+            posicion = palabrasClave[3].length;
             palabra +="o"
            }else if(letras.substr(i,palabrasClave[4].length) == palabrasClave[4]){
-            prueba = palabrasClave[4].length;
+            posicion = palabrasClave[4].length;
             palabra +="u"
            }else{
            
@@ -55,7 +56,7 @@ function desencriptar(){
            
     }
 
-    return console.log(palabra)
+    return alert(palabra)
 }
 
 
