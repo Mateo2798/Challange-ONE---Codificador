@@ -13,16 +13,25 @@
 </head>
 <body>
     <main>
-        <section class="contenedor">
+        <div class="contenedor-logo">
+          <div class="logo">
+            <h1>MV</h1>
+          </div>
+        </div>
+        <section class="contenedor">           
             <div  class="contenedor-texto">
-                <textarea name="" id="" cols="50" rows="30" placeholder="Ingrese Texto">maitenterober y enterlimeszaibenterth</textarea>
+                <textarea name="" id="" cols="50" rows="20" placeholder="Ingrese Texto"></textarea>
                <div class="contenedor-botones">
                 <input type="button" id="encriptador" class="buttons" value="Encriptador">
                 <input type="button" id="desencriptador" class="buttons"  value="Desencriptar">
                </div>
             </div>
             <div class="contenedor-texto">
-                <textarea name="" id="" cols="30" rows="30" disabled></textarea>
+                <div class="contenedor-copy">
+                    <div class="textoGenerado" id="textoGenerado"></div>
+                    <input type="button" id="copy" class="buttons" value="Copiar">
+                </div>
+               
             </div>
         </section>
     </main>

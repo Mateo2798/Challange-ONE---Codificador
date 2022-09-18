@@ -1,6 +1,9 @@
 var texto =  document.querySelector("textarea");
+var textoGenerado = document.getElementById("textoGenerado");
 var buttonEncriptador = document.getElementById("encriptador");
 var buttonDesencriptar = document.getElementById("desencriptador");
+var buttonCopy = document.getElementById("copy");
+
 
 var palabrasClave = ["ai","enter","imes","ober","ufat"];
 
@@ -23,8 +26,15 @@ var palabrasClave = ["ai","enter","imes","ober","ufat"];
             palabra = palabra + letras[i].toString();
         }
    }
-   
-   return alert(palabra);
+
+   if (buttonDesencriptar.classList.contains("active")) {
+       buttonDesencriptar.classList.remove("active");
+   }
+
+   if (!buttonEncriptador.classList.contains("active")) {
+       buttonEncriptador.classList.toggle("active");
+   }
+   return textoGenerado.innerHTML = palabra;
 }
 
 function desencriptar(){
@@ -52,13 +62,32 @@ function desencriptar(){
            }else{
            
             palabra += letras[i];
-           }
-           
+           }       
+    }
+    if (buttonEncriptador.classList.contains("active")) {
+        buttonEncriptador.classList.remove("active");
     }
 
-    return alert(palabra)
+    if (!buttonDesencriptar.classList.contains("active")) {
+        buttonDesencriptar.classList.toggle("active");
+    }
+ 
+    
+    return textoGenerado.innerHTML = palabra;
+}
+
+function copy(){
+    /*Crear un input text o textarea falso */
+    const textFalso = document.createElement("textarea");
+    textFalso.textContent = textoGenerado.innerText;
+    document.body.append(textFalso);   
+    textFalso.select();
+    document.execCommand("copy");
+    /*Eliminar el text Falso */
+    textFalso.remove()
 }
 
 
 buttonEncriptador.onclick = encriptar;
 buttonDesencriptar.onclick = desencriptar;
+buttonCopy.addEventListener("click",copy)
