@@ -94,22 +94,27 @@ textarea:focus{
     width: 80%;
     height: 400px;
     margin: 0 auto;
+    display: none;
+}
+#diseno{
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;  
 }
-
-.textoGenerado img{
+#diseno img{
     width: 100%;
 }
-.textoGenerado h5{
+#diseno h5{
     font-size: 18px;
     font-weight: bold;
     text-align: center;
     margin-top: 10px;
 }
-.textoGenerado p{
+#diseno p{
     font-size: 12px;
     text-align: center;
     margin-top: 10px;

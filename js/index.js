@@ -3,6 +3,7 @@ var textoGenerado = document.getElementById("textoGenerado");
 var buttonEncriptador = document.getElementById("encriptador");
 var buttonDesencriptar = document.getElementById("desencriptador");
 var buttonCopy = document.getElementById("copy");
+var diseno = document.getElementById("diseno");
 
 
 var palabrasClave = ["ai","enter","imes","ober","ufat"];
@@ -11,6 +12,7 @@ var palabrasClave = ["ai","enter","imes","ober","ufat"];
    var letras = texto.value.toLocaleLowerCase();
    var contador = 0
    var palabra = ""
+
    for(var i = 0; i < letras.length; i++){
         if(letras[i] == "a"){
             palabra = palabra + "ai"
@@ -34,6 +36,13 @@ var palabrasClave = ["ai","enter","imes","ober","ufat"];
    if (!buttonEncriptador.classList.contains("active")) {
        buttonEncriptador.classList.toggle("active");
    }
+   textoGenerado.style.display = "block";
+   textoGenerado.style.paddingTop = "1em";
+   diseno.style.display = "none"
+   document.getElementById("copy").style.display = "block";
+   texto.value = "";
+
+
    return textoGenerado.innerHTML = palabra;
 }
 
@@ -72,7 +81,12 @@ function desencriptar(){
         buttonDesencriptar.classList.toggle("active");
     }
  
-    
+    textoGenerado.style.display = "block";
+   textoGenerado.style.paddingTop = "1em";
+   diseno.style.display = "none"
+   document.getElementById("copy").style.display = "block";
+   texto.value = "";
+
     return textoGenerado.innerHTML = palabra;
 }
 
@@ -84,7 +98,14 @@ function copy(){
     textFalso.select();
     document.execCommand("copy");
     /*Eliminar el text Falso */
-    textFalso.remove()
+    textFalso.remove();
+    textoGenerado.style.paddingTop = "0px";
+    textoGenerado.innerText = "";
+    textoGenerado.style.display = "none"
+    document.getElementById("copy").style.display = "none";
+    diseno.style.display = "flex"
+    
+
 }
 
 
