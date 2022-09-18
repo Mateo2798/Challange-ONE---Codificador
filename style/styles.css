@@ -45,6 +45,17 @@ textarea:focus{
     outline: 0 none;
 }
 
+.aviso{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+}
+.aviso img{
+    margin-right: 1em;
+}
+
 .contenedor-texto {
     display: flex;
     justify-content: center;
@@ -61,7 +72,7 @@ textarea:focus{
 }
 
 .contenedor-copy{
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
     position: relative;
     background-color: white;
@@ -78,7 +89,7 @@ textarea:focus{
 .textoGenerado{
     font-size: 20px;
     width: 80%;
-    height: 386px;
+    height: 400px;
     margin: 0 auto;
     padding-top: 1em;   
 }
