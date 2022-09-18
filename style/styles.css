@@ -32,6 +32,7 @@ body{
 .contenedor {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -63,6 +64,7 @@ textarea:focus{
     align-items: center;
     padding: 0.5em;
     width: 50%;
+    box-sizing: border-box;
 }
 
 .contenedor-botones{
@@ -72,15 +74,16 @@ textarea:focus{
 }
 
 .contenedor-copy{
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
     position: relative;
     background-color: white;
     border-radius: 10px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow:  rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.contenedor-copy input{
+#copy{
+    display: none;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -91,11 +94,30 @@ textarea:focus{
     width: 80%;
     height: 400px;
     margin: 0 auto;
-    padding-top: 1em;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+.textoGenerado img{
+    width: 100%;
+}
+.textoGenerado h5{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+.textoGenerado p{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
 }
 .buttons{
     width: 40%;
     height: 2.5em;
+    font-size: 18px;
     border-radius: 5px;
     color: #0A3871;
     background: #D8DFE8;

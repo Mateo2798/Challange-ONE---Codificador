@@ -8,7 +8,7 @@ var buttonCopy = document.getElementById("copy");
 var palabrasClave = ["ai","enter","imes","ober","ufat"];
 
  function encriptar(){
-   var letras = texto.value;
+   var letras = texto.value.toLocaleLowerCase();
    var contador = 0
    var palabra = ""
    for(var i = 0; i < letras.length; i++){
@@ -38,7 +38,7 @@ var palabrasClave = ["ai","enter","imes","ober","ufat"];
 }
 
 function desencriptar(){
-    var letras = texto.value;
+    var letras = texto.value.toLocaleLowerCase()
     
     palabra = ""
     var posicion = 1;
